@@ -1,5 +1,7 @@
 <div class="container">
-<h1>@gig.name</h1>
-<p>@gig.category</p>
+<h1><%=@gig.name %></h1>
+<p><%= @gig.category%></p>
+<p><%=  @gig.description%></p>
 
+<%= link_to "Back to home page", gigs_path(@gigs) %>
 </div>
