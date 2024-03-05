@@ -27,7 +27,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_04_143108) do
 
   create_table "gigs", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "category"
     t.string "location"
     t.text "description"
     t.bigint "user_id", null: false
