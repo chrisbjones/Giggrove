@@ -1,9 +1,12 @@
 <h1>Gigs</h1>
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
-    Gigs
+
+<!--<div class="container align-items-center">-->
+  <div class="cards">
+    <% @gigs.each do |gig| %>
+      <div class="gig-card">
+        <h3><%= link_to gig.name, @gig %></h3>
+        <p><%= gig.category %></p>
+      </div>
+    <% end %>
   </div>
-    <ul>
-      <%= @gigs.each do |gig| %>
-      <li><%= gig.name %></li>
-      <%= end %>
-    </ul>
+</div>
