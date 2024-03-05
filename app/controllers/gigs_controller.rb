@@ -8,9 +8,11 @@ class GigsController < ApplicationController
   end
 
   def new
+    @gig = Gig.new
   end
 
   def create
+    
   end
 
 end

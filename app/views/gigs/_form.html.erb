@@ -1,0 +1,29 @@
+<div class="container_form">
+  <form class="simple_form new_gig" id="new_gig" novalidate="novalidate" action="/gigs" accept-charset="UTF-8" method="post">
+
+      <div class="mb-3 string optional gig_name">
+        <label class="string optional" for="name">Gig Name</label>
+        <input class="form-control string optional" type="text" name="gig[name]" id="gig_name">
+      </div>
+
+        <div>
+        <label class="string optional" for="gig_category">Choose Category</label>
+        <select id="form_first" class="form-select " aria-label="Default select example">
+          <option selected> Category </option>
+          <option value="1">Cooking</option>
+          <option value="2">Washing</option>
+          <option value="3">Cleaning</option>
+        </select>
+      </div>
+    <br>
+      <div class="form-outline mx-auto" data-mdb-input-init>
+      <label class="form-label" for="textAreaExample" name="gig_description[description]">Description</label>
+      <textarea class="form-control" id="textAreaExample" rows="4"></textarea>
+
+
+      </div>
+      <br>
+    <input type="submit" class="btn btn-primary btn-sm" name="commit" value="Create Gig" data-disable-with="Create Gig">
+  </form>
+
+</div>
