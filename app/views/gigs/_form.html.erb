@@ -1,29 +1,24 @@
 <div class="container_form">
-  <form class="simple_form new_gig" id="new_gig" novalidate="novalidate" action="/gigs" accept-charset="UTF-8" method="post">
+    <%= form_with(model: Gig.new, local: false, data: { turbo: true }) do |form| %>
+    <div class="mb-3 string optional gig_name">
+      <%= form.label :name, class: "string optional" %>
+      <%= form.text_field :name, class: "form-control string optional", id: "name" %>
+    </div>
 
-      <div class="mb-3 string optional gig_name">
-        <label class="string optional" for="name">Gig Name</label>
-        <input class="form-control string optional" type="text" name="gig[name]" id="gig_name">
-      </div>
+    <div>
+      <%= form.label :category, class: "string optional" %>
+      <%= form.select :category, options_for_select(["Cooking", "Washing", "Cleaning"]), { include_blank: "Category" }, class: "form-select", id: "form_first" %>
+    </div>
 
-        <div>
-        <label class="string optional" for="gig_category">Choose Category</label>
-        <select id="form_first" class="form-select " aria-label="Default select example">
-          <option selected> Category </option>
-          <option value="1">Cooking</option>
-          <option value="2">Washing</option>
-          <option value="3">Cleaning</option>
-        </select>
-      </div>
     <br>
-      <div class="form-outline mx-auto" data-mdb-input-init>
-      <label class="form-label" for="textAreaExample" name="gig_description[description]">Description</label>
-      <textarea class="form-control" id="textAreaExample" rows="4"></textarea>
 
+    <div class="form-outline mx-auto" data-mdb-input-init>
+      <%= form.label :description, class: "form-label", name: "gig_description[description]" %>
+      <%= form.text_area :description, class: "form-control", id: "textAreaExample", rows: "4" %>
+    </div>
 
-      </div>
-      <br>
-    <input type="submit" class="btn btn-primary btn-sm" name="commit" value="Create Gig" data-disable-with="Create Gig">
-  </form>
+    <br>
 
+    <%= form.submit "Create Gig", class: "btn btn-primary btn-sm" %>
+  <% end %>
 </div>
