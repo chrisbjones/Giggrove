@@ -4,7 +4,7 @@
   <div class="cards">
     <% @gigs.each do |gig| %>
       <div class="gig-card">
-        <h3><%= link_to gig.name, @gig %></h3>
+        <h3><%= link_to gig.name, gig_path(gig) %></h3>
         <p><%= gig.category %></p>
       </div>
     <% end %>
