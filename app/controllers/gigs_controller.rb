@@ -6,4 +6,11 @@ class GigsController < ApplicationController
   def show
     @gig = Gig.find(params[:id])
   end
+
+  def new
+  end
+
+  def create
+  end
+
 end
