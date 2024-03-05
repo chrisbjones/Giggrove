@@ -13,7 +13,7 @@ class GigsController < ApplicationController
 
   def create
     @gig = Gig.new(gig_params)
-    if @gig.save!
+    if @gig.save
       redirect_to root_path, notice: 'Gig was successfully created.'
     else
       render :new
