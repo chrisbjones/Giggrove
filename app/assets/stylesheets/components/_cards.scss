@@ -28,14 +28,14 @@
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
@@ -44,9 +44,15 @@
   border-radius: 10px;
   height: 8rem;
   padding: 15px;
+  width: 250px;
+
 
   h3 {
     font-size: medium;
     font-weight: bold;
   }
+}
+#div_design{
+  display: flex;
+  width: 1800px;
 }
