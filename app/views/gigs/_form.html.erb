@@ -1,24 +1,27 @@
 <div class="container_form">
     <%= form_with(model: Gig.new, local: false, data: { turbo: true }) do |form| %>
-    <div class="mb-3 string optional gig_name">
-      <%= form.label :name, class: "string optional" %>
-      <%= form.text_field :name, class: "form-control string optional", id: "name" %>
-    </div>
+      <div class="mb-3 string optional gig_name">
+        <%= form.label :name, class: "string optional" %>
+        <%= form.text_field :name, class: "form-control string optional", id: "name" %>
+      </div>
 
-    <div>
-      <%= form.label :category, class: "string optional" %>
-      <%= form.select :category, options_for_select(["Cooking", "Washing", "Cleaning"]), { include_blank: "Category" }, class: "form-select", id: "form_first" %>
-    </div>
+      <div>
+        <%= form.label :category, class: "string optional" %>
+        <%= form.select :category, options_for_select(["Cooking", "Washing", "Cleaning", "Repair"]), { include_blank: "Category" }, class: "form-select", id: "form_first" %>
+      </div>
 
-    <br>
+      <%= form.label :image %>
+      <%= form.file_field :photo %>
 
-    <div class="form-outline mx-auto" data-mdb-input-init>
-      <%= form.label :description, class: "form-label", name: "gig_description[description]" %>
-      <%= form.text_area :description, class: "form-control", id: "textAreaExample", rows: "4" %>
-    </div>
+      <br>
 
-    <br>
+      <div class="form-outline mx-auto" data-mdb-input-init>
+        <%= form.label :description, class: "form-label", name: "gig_description[description]" %>
+        <%= form.text_area :description, class: "form-control", id: "textAreaExample", rows: "4" %>
+      </div>
 
-    <%= form.submit "Create Gig", class: "btn btn-primary btn-sm" %>
+      <br>
+
+      <%= form.submit "Create Gig", class: "btn btn-primary btn-sm" %>
   <% end %>
 </div>
