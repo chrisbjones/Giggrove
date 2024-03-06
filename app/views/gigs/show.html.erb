@@ -1,8 +1,8 @@
 <div class="container">
   <h1><%= @gig.name %> </h1>
-    <p><%= @gig.category%> </p>
-    <p><%= @gig.description%> </p>
+  <p><%= @gig.category%> </p>
+  <p><%= @gig.description%> </p>
 
-<%= link_to "Back to home page", root_path %>
-<%= link_to "Book this gig", new_gig_booking_path(@gig) %>
+  <%= link_to "Back to home page", root_path %>
+  <%= link_to "Book this gig", new_gig_booking_path(@gig) %>
 </div>
