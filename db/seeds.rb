@@ -17,7 +17,7 @@ puts "Creating users"
 users = []
 users << User.create!(first_name: "Monte", last_name: "Legend", email: "monte@giggroove.com", password: "password")
 users << User.create!(first_name: "Pabs", last_name: "King", email: "pabs@giggroove.com", password: "password")
-users << User.create!(first_name: "Kingsley", last_name: "Prince", email: "kingsey@giggroove.com", password: "password")
+users << User.create!(first_name: "Kingsley", last_name: "Prince", email: "kingsley@giggroove.com", password: "password")
 users << User.create!(first_name: "Chris", last_name: "Jester", email: "chris@giggroove.com", password: "password")
 
 puts "#{User.count} users created"

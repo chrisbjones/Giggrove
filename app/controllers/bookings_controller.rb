@@ -17,11 +17,12 @@ class BookingsController < ApplicationController
       redirect_to @booking, notice: "Booking was successfullty made"
     else
       render :new
+    end
   end
-end
 
   private
   def booking_params
     params.require(:booking).permit(:date, :time, :user_id)
   end
 end
+
