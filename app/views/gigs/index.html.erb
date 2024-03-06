@@ -4,6 +4,7 @@
   <div class="cards">
     <% @gigs.each do |gig| %>
       <div class="gig-card">
+        <%= cl_image_tag gig.photo.key, width: 150 if gig.photo.attached? %>
         <h3><%= link_to gig.name, gig_path(gig) %></h3>
         <p><%= gig.category %></p>
       </div>
