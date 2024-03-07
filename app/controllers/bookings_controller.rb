@@ -20,9 +20,24 @@ class BookingsController < ApplicationController
     end
   end
 
+  def update
+    @booking = Booking.find(params[:id])
+    if @booking.update(booking_params)
+      redirect_to dashboard
+    else
+      :new
+    end
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.delete
+    redirect_to root_path, notice: "Booking has been cancelled"
+  end
+
   private
 
   def booking_params
-    params.require(:booking).permit(:date, :time, :user_id, :gig_id)
+    params.require(:booking).permit(:date, :time, :user_id, :gig_id, :status)
   end
 end
