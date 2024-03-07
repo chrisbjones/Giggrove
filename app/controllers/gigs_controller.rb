@@ -28,6 +28,11 @@ class GigsController < ApplicationController
     end
   end
 
+  def approve
+    @gig = Gig.find(params[:id])
+
+  end
+
   private
 
   def gig_params

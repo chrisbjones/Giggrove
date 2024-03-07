@@ -15,45 +15,34 @@
         <% end %>
       </div>
       <div id="container_gig_left">
-          <h2>Your bookings:</h2>
-            <% @user.bookings.each do |booking| %>
-            <p><strong>Gig Booked: </strong><%= booking.gig.name %></p>
-            <p><strong> Date: </strong><%= booking.date %></p>
-            <p><strong>Time:</strong><%= booking.time %></p>
-            <p><strong>Status:</strong><%= booking.status.capitalize %></p>
-
-            <% if booking.pending? && booking.gig.user == @user %>
-              <%= simple_form_for [@gig, booking] do |f| %>
-                <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
-                <%= f.submit 'Accept', class: 'btn btn-info' %>
-              <% end %>
-
-            <%= simple_form_for [@gig, booking] do |f| %>
-              <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
-              <%= f.submit 'Reject', class: 'btn btn-light' %>
+          <h2>Your requested bookings:</h2>
+            <% @requests.each do |booking| %>
+              <p><strong>Gig Booked: </strong><%= booking.gig.name %></p>
+              <p><strong> Date: </strong><%= booking.date %></p>
+              <p><strong>Time:</strong><%= booking.time %></p>
+              <p><strong>Status: </strong><%= booking.status.capitalize %></p>
+              <%# <%= link_to "Cancel Booking ", dashboard_path, class: "btn btn-danger rounded", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to cancel this booking?" } %>
+              <%= link_to "Approve Myself YAYAY", booking_approval_path(booking), class: 'btn btn-info' %>
+              <%= link_to "HELLL NOOO mY GUY", booking_declined_path(booking), class: 'btn btn-light' %>
+              <hr>
             <% end %>
-          <% end %>
-        <% end %>
 
           <h2>Your Gigs:</h2>
           <% @user.gigs.each do |gig| %>
             <div class="gig">
               <p><strong>Name:</strong> <%= gig.name %></p>
               <p><strong>Description:</strong> <%= gig.description %></p>
-              <%= simple_form_for [gig] do |f| %>
-                <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
-                <%= f.submit 'Accept', class: 'btn btn-info' %>
-              <% end %>
+              <%= link_to "HELLO", booking_approval_path(gig), class: 'btn btn-info' %>
 
               <%= simple_form_for gig do |f| %>
               <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
               <%= f.submit 'Reject', class: 'btn btn-light' %>
             <% end %>
             </div>
+            <hr>
           <% end %>
         </div>
       </div>
     </div>
   </div>
 </div>
-            <%# <%= link_to "Cancel Booking ", dashboard_path, class: "btn btn-danger rounded", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to cancel this booking?" } %> %>
