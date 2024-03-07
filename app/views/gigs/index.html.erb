@@ -1,16 +1,15 @@
-<div class="container my-5 align-items-center">
-<h1>Gigs</h1>
-<div id="div_design">
+<div id="width-div">
+  <div class="container">
+    <br><br>
+    <h3>Hey  <%= @user.first_name %>,</h3>
+    <br><br>
 
-
-  <div class="cards">
-    <% @gigs.each do |gig| %>
-      <div class="gig-card">
-        <%= cl_image_tag gig.photo.key, width: 150 if gig.photo.attached? %>
-        <h3><%= link_to gig.name, gig_path(gig) %></h3>
-        <p><%= gig.category %></p>
+    <div class="big-card">
+      <div>
+        <h2><strong>Find the Gigs you need</strong></h2>
+        <h5>Hand-vetted talent for all your needs.</h2>
       </div>
-    <% end %>
+    <%= render partial: 'gigs/card', locals: { form: @form } %>
+    </div>
   </div>
-</div>
 </div>
