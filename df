@@ -1,0 +1,207 @@
+[33mcommit 88a78678fe4293e40182a5fcdf434090408b4063[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31mheroku/master[m[33m)[m
+Merge: 287fb63 ffa8f57
+Author: Kingsley <157271602+kingsleyosagie20@users.noreply.github.com>
+Date:   Thu Mar 7 09:25:51 2024 +0200
+
+    Merge pull request #12 from chrisbjones/my_new_work
+    
+    My new work
+
+[33mcommit ffa8f5768788083f652de857f096b4269fceda30[m[33m ([m[1;31morigin/my_new_work[m[33m, [m[1;32mmy_new_work[m[33m)[m
+Author: Kingsley Osagie <osagiekingsley20@icloud.com>
+Date:   Thu Mar 7 09:23:57 2024 +0200
+
+    update on the frontpage
+
+[33mcommit 68f6c450ff93327740234346de957510f8843775[m[33m ([m[1;31morigin/new_branch_name[m[33m, [m[1;32mnew_branch_name[m[33m)[m
+Author: Kingsley Osagie <osagiekingsley20@icloud.com>
+Date:   Wed Mar 6 16:47:12 2024 +0200
+
+    update
+
+[33mcommit 287fb634735295fe346a26de5f7963ea99490f77[m
+Merge: 14b565d d6dae15
+Author: Kingsley <157271602+kingsleyosagie20@users.noreply.github.com>
+Date:   Wed Mar 6 16:06:21 2024 +0200
+
+    Merge pull request #11 from chrisbjones/new_update_1
+    
+    add cloudinary setup
+
+[33mcommit d6dae154492c8640830bbc4c074289dacb673dfe[m
+Merge: 98f0d46 14b565d
+Author: Kingsley <157271602+kingsleyosagie20@users.noreply.github.com>
+Date:   Wed Mar 6 16:06:09 2024 +0200
+
+    Merge branch 'master' into new_update_1
+
+[33mcommit 98f0d4657f723e786150b7bc30935d39f4a76d76[m[33m ([m[1;31morigin/new_update_1[m[33m, [m[1;32mnew_update_1[m[33m)[m
+Author: Kingsley Osagie <osagiekingsley20@icloud.com>
+Date:   Wed Mar 6 16:01:42 2024 +0200
+
+    add cloudinary setup
+
+[33mcommit 14b565ddde149b47016cb7650cc88d0903557013[m
+Merge: 26bebff 7f70047
+Author: Monté-Kylan <119729356+3mptyname@users.noreply.github.com>
+Date:   Wed Mar 6 16:00:38 2024 +0200
+
+    Merge pull request #10 from chrisbjones/new
+    
+    minor touch ups
+
+[33mcommit 7f70047e9f6584190460ca7f69ba008d9e7a2796[m
+Author: Monte Nomkusane <iammontekylan@gmail.com>
+Date:   Wed Mar 6 15:59:44 2024 +0200
+
+    minor touch ups
+
+[33mcommit 26bebff778eac7c1132ea899b3242f104bcc4cca[m
+Merge: 8c5ccf3 1abe9ef
+Author: Pabalelo <114606058+PabaleloS@users.noreply.github.com>
+Date:   Wed Mar 6 15:42:32 2024 +0200
+
+    Merge pull request #9 from chrisbjones/bookings
+    
+    Bookings
+
+[33mcommit 1abe9ef6f04aa016d8da2abc200062e192fad5a5[m
+Author: Pabalelo Sethiba <pabalelosethiba.ps@gmail.com>
+Date:   Wed Mar 6 15:41:00 2024 +0200
+
+    Final update on the bookings controller and view
+
+[33mcommit 3f77275c6be9bffae93fabd454a98b9ccb6c9c10[m
+Merge: d6210da 8c5ccf3
+Author: Pabalelo Sethiba <pabalelosethiba.ps@gmail.com>
+Date:   Wed Mar 6 13:40:34 2024 +0200
+
+    updates on bookings controller
+
+[33mcommit d6210da7de506c102057ec70d5487fc1945d633f[m
+Author: Pabalelo Sethiba <pabalelosethiba.ps@gmail.com>
+Date:   Wed Mar 6 13:37:12 2024 +0200
+
+    updates on bookings controller
+
+[33mcommit 3465c93cc7a7eedb13ad2790d9902eadaa3cbcae[m
+Merge: c22473e ad7bd44
+Author: Pabalelo Sethiba <pabalelosethiba.ps@gmail.com>
+Date:   Wed Mar 6 13:05:20 2024 +0200
+
+    Booking controller actions
+
+[33mcommit 8c5ccf3593b2430cb30fdddf449dea19f3a424c2[m
+Merge: 4e3fa79 55ab9c1
+Author: Monté-Kylan <119729356+3mptyname@users.noreply.github.com>
+Date:   Wed Mar 6 12:51:35 2024 +0200
+
+    Merge pull request #6 from chrisbjones/new_update
+    
+    New update for "create & new" actions
+
+[33mcommit 4e3fa793ea88111d318067ab5ddf51eba5ca8801[m
+Merge: ad7bd44 192787e
+Author: Pabalelo <114606058+PabaleloS@users.noreply.github.com>
+Date:   Wed Mar 6 12:40:44 2024 +0200
+
+    Merge pull request #8 from chrisbjones/bookings
+    
+    Coded the actions for the bookings controller
+
+[33mcommit 192787edb4ddb535d72e2f937a8efe1a9649a5eb[m
+Merge: c22473e ad7bd44
+Author: Pabalelo <114606058+PabaleloS@users.noreply.github.com>
+Date:   Wed Mar 6 11:21:34 2024 +0200
+
+    Merge branch 'master' into bookings
+
+[33mcommit c22473ee0f87efde0c9d9b147960fe298ebb9860[m
+Author: Pabalelo Sethiba <pabalelosethiba.ps@gmail.com>
+Date:   Tue Mar 5 19:49:33 2024 +0200
+
+    Coded the actions for the bookings controller
+
+[33mcommit 55ab9c1ad4b14f31bbf8ec4e773795f623437655[m[33m ([m[1;31morigin/new_update[m[33m, [m[1;32mnew_update[m[33m)[m
+Author: Kingsley Osagie <osagiekingsley20@icloud.com>
+Date:   Tue Mar 5 18:23:52 2024 +0200
+
+    update
+
+[33mcommit 60017ba9266a071664642d18b5c7485b9c1880e8[m
+Merge: 1edc478 d10e055
+Author: Kingsley Osagie <osagiekingsley20@icloud.com>
+Date:   Tue Mar 5 18:21:18 2024 +0200
+
+    fix merge conflicts
+
+[33mcommit 1edc4783b05e2b0016f1c8d1e5be7dddd06b03b4[m
+Author: Kingsley Osagie <osagiekingsley20@icloud.com>
+Date:   Tue Mar 5 18:17:37 2024 +0200
+
+    add exclamation mark after save method
+
+[33mcommit ad7bd44cd680caa82e0b6f51fc4891b4a980ffcc[m
+Merge: 15eec1e 77212c5
+Author: Monté-Kylan <119729356+3mptyname@users.noreply.github.com>
+Date:   Tue Mar 5 18:09:49 2024 +0200
+
+    Merge pull request #7 from chrisbjones/newbranch
+    
+    linked to bookings
+
+[33mcommit 04d4073141672fb065bbeba48b185463c3b45874[m
+Merge: 8a7a90e 15eec1e
+Author: Kingsley Osagie <osagiekingsley20@icloud.com>
+Date:   Tue Mar 5 18:09:47 2024 +0200
+
+    update form
+
+[33mcommit 77212c5975cdd65fcf3564680fede634acc1623c[m
+Author: Monte Nomkusane <iammontekylan@gmail.com>
+Date:   Tue Mar 5 18:07:11 2024 +0200
+
+    linked to bookings
+
+[33mcommit 8a7a90eb299e13fcd19e606d71c2b1410c34de08[m
+Author: Kingsley Osagie <osagiekingsley20@icloud.com>
+Date:   Tue Mar 5 18:06:27 2024 +0200
+
+    form error fix
+
+[33mcommit d10e0556649770bfbb62b3ca6c59cffdd2b2c07a[m
+Merge: b575ea3 15eec1e
+Author: Kingsley <157271602+kingsleyosagie20@users.noreply.github.com>
+Date:   Tue Mar 5 17:15:19 2024 +0200
+
+    Merge branch 'master' into new_update
+
+[33mcommit b575ea3230a69ed940b9b77a6d10bca31fad9ae2[m
+Author: Kingsley Osagie <osagiekingsley20@icloud.com>
+Date:   Tue Mar 5 17:01:50 2024 +0200
+
+    update
+
+[33mcommit 15eec1edabfdd6b57a413111d8bca7fa1c53cf14[m
+Merge: c320640 13b6375
+Author: Monté-Kylan <119729356+3mptyname@users.noreply.github.com>
+Date:   Tue Mar 5 16:19:39 2024 +0200
+
+    Merge pull request #5 from chrisbjones/gigview
+    
+    edited link to path in the index view
+
+[33mcommit 13b637532113d5820bd1a29332280fb0e7a64dc2[m
+Author: Monte Nomkusane <iammontekylan@gmail.com>
+Date:   Tue Mar 5 16:15:32 2024 +0200
+
+    edited link to path in the index view
+
+[33mcommit c3206408f24df642128280e3a2e39607091a65fd[m
+Merge: 4df9136 1357555
+Author: Pabalelo <114606058+PabaleloS@users.noreply.github.com>
+Date:   Tue Mar 5 16:07:01 2024 +0200
+
+    Merge pull request #4 from chrisbjones/pabi
+    
+    show changes
