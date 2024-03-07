@@ -1,0 +1,35 @@
+<div class="container my-5 align-items-center">
+
+<div id="div_design">
+
+
+  <div class="cards">
+    <% @gigs.each do |gig| %>
+      <div class="parent-div">
+
+
+        <div id="user_profile_div">
+          <div id="title_div">
+            <%= image_tag gig.user.profile_picture, class: "avatar" %>
+          <%# <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar" %>
+        <h5> <%= gig.user.first_name %> <%= gig.user.last_name %> </h5>
+        </div>
+        <%= image_tag "https://as1.ftcdn.net/v2/jpg/02/05/50/86/1000_F_205508624_vW2g4uq40jCyC59eFgXiTHuDdPvAIiO4.jpg", class: "avatar " %>
+        </div>
+      <hr>
+
+      <div id="image_div">
+        <%= cl_image_tag gig.photo.key, class:"img-fluid img-max-height img-max-width" if gig.photo.attached? %>
+      </div>
+
+      <div id="details_col_div">
+          <h3><%= link_to gig.name, gig_path(gig) %></h3>
+            <p> Category: <%= gig.category %></p>
+            <%# <button type="button" class="btn btn-primary" data-mdb-ripple-init>Hire Now</button> %>
+      </div>
+
+      </div>
+    <% end %>
+  </div>
+</div>
+</div>

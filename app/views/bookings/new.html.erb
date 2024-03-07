@@ -1,6 +1,8 @@
-<h1>Book this <%= @gig.name %></h1>
-<%= simple_form_for [@gig, @booking] do |f| %>
-  <%= f.input :date %>
-  <%= f.input :time %>
-  <%= f.submit "Book gig"%>
-<% end %>
+<div class="container my-5">
+  <h1>Book this <%= @gig.name %></h1>
+  <%= simple_form_for [@gig, @booking] do |f| %>
+    <%= f.input :date %>
+    <%= f.input :time %>
+    <%= f.submit "Book gig"%>
+  <% end %>
+</div>

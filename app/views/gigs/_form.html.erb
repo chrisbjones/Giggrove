@@ -9,13 +9,14 @@
         <%= form.label :category, class: "string optional" %>
         <%= form.select :category, options_for_select(["Cooking", "Washing", "Cleaning", "Repair"]), { include_blank: "Category" }, class: "form-select", id: "form_first" %>
       </div>
-
+      <br>
       <%= form.label :image %>
       <%= form.file_field :photo %>
 
       <br>
 
       <div class="form-outline mx-auto" data-mdb-input-init>
+      <br>
         <%= form.label :description, class: "form-label", name: "gig_description[description]" %>
         <%= form.text_area :description, class: "form-control", id: "textAreaExample", rows: "4" %>
       </div>
