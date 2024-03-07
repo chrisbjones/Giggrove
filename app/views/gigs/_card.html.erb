@@ -1,8 +1,6 @@
 <div class="container my-5 align-items-center">
 
 <div id="div_design">
-
-
   <div class="cards">
     <% @gigs.each do |gig| %>
       <div class="parent-div">
@@ -14,8 +12,6 @@
           </div>
           <hr>
           </div>
-
-
       <div id="image_div">
         <%= cl_image_tag gig.photo.key, class:"img-fluid img-max-height img-max-width" if gig.photo.attached?%>
       </div>
