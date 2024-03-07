@@ -1,0 +1,74 @@
+#cover_bg{
+  background-color: white;
+
+}
+
+#gig_parent{
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 10px;
+
+
+
+  h4{
+    margin: 10px;
+  }
+
+
+  .cover_div{
+    padding: 10px;
+
+    .img-max-height_1 {
+      max-height: 325px;
+    }
+
+    .img-max-width_1 {
+      min-width: 100%;
+      object-fit:cover;
+    }
+  }
+}
+
+#booking_parent{
+  // padding-left: 110px;
+  display: flex;
+  justify-content: space-between;
+  // padding-right: 110px;
+
+
+}
+
+
+#seller_details{
+  display: flex;
+  justify-content: space-between;
+  width:fit-content;
+  height: 40px;
+
+  #s_detials{
+    margin-left: 10px;
+    height: 30px;
+    width: fit-content;
+
+    p{
+      margin-top: -10px;
+    }
+  }
+
+}
+
+
+#booking_form{
+  background-color: white;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+  width:fit-content;
+  height:fit-content;
+  padding: 20px;
+
+}
+
+#gid_price_div{
+  display: flex;
+  justify-content: space-between;
+
+}
