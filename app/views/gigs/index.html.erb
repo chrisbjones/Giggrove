@@ -4,6 +4,12 @@
     <h3>Hey  <%= @user.first_name %>,</h3>
     <br><br>
 
+<div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
+
     <div class="big-card">
       <div>
         <h2><strong>Find the Gigs you need</strong></h2>

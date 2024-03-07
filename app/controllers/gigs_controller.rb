@@ -2,8 +2,19 @@ class GigsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @gigs = Gig.all
     @user = current_user
+    @all_gigs = Gig.all
+    if params[:query].present?
+      @gigs = Gig.global_search(params[:query])
+    else
+      @gigs = Gig.all
+    end
+    @markers = @all_gigs.geocoded.map do |gig|
+      {
+        lat: gig.latitude,
+        lng: gig.longitude
+      }
+    end
   end
 
 
