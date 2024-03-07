@@ -1,0 +1,31 @@
+[1mdiff --git a/app/controllers/gigs_controller.rb b/app/controllers/gigs_controller.rb[m
+[1mindex 89f3d3d..83ab8cb 100644[m
+[1m--- a/app/controllers/gigs_controller.rb[m
+[1m+++ b/app/controllers/gigs_controller.rb[m
+[36m@@ -6,7 +6,6 @@[m [mclass GigsController < ApplicationController[m
+     @user = current_user[m
+   end[m
+ [m
+[31m-[m
+   def show[m
+     @gig = Gig.find(params[:id])[m
+   end[m
+[1mdiff --git a/app/views/gigs/_card.html.erb b/app/views/gigs/_card.html.erb[m
+[1mindex e697bcb..925d90e 100644[m
+[1m--- a/app/views/gigs/_card.html.erb[m
+[1m+++ b/app/views/gigs/_card.html.erb[m
+[36m@@ -10,10 +10,10 @@[m
+ [m
+         <div id="user_profile_div">[m
+           <div id="title_div">[m
+[31m-            <%# <%= cl_image_tag(gig.user.profile_picture.key, class: "avatar") %> %>[m
+[31m-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar"%>[m
+[31m-        <h5> <%= gig.user.first_name %> <%= gig.user.last_name %> </h5>[m
+[31m-        </div>[m
+[32m+[m[32m            <%= cl_image_tag(gig.user.profile_picture, class: "avatar") %>[m
+[32m+[m[32m          <%# <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar"%>[m
+[32m+[m[32m          <h5> <%= gig.user.first_name %> <%= gig.user.last_name %> </h5>[m
+[32m+[m[32m          </div>[m
+         </div>[m
+ [m
+         <%= cl_image_tag("https://as1.ftcdn.net/v2/jpg/02/05/50/86/1000_F_205508624_vW2g4uq40jCyC59eFgXiTHuDdPvAIiO4.jpg", class: "avatar " )%>[m
