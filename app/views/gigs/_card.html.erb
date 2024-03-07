@@ -10,16 +10,17 @@
 
         <div id="user_profile_div">
           <div id="title_div">
-            <%= image_tag gig.user.profile_picture, class: "avatar" %>
-          <%# <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar" %>
+            <%# <%= cl_image_tag(gig.user.profile_picture.key, class: "avatar") %> %>
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar"%>
         <h5> <%= gig.user.first_name %> <%= gig.user.last_name %> </h5>
         </div>
-        <%= image_tag "https://as1.ftcdn.net/v2/jpg/02/05/50/86/1000_F_205508624_vW2g4uq40jCyC59eFgXiTHuDdPvAIiO4.jpg", class: "avatar " %>
         </div>
+
+        <%= cl_image_tag("https://as1.ftcdn.net/v2/jpg/02/05/50/86/1000_F_205508624_vW2g4uq40jCyC59eFgXiTHuDdPvAIiO4.jpg", class: "avatar " )%>
       <hr>
 
       <div id="image_div">
-        <%= cl_image_tag gig.photo.key, class:"img-fluid img-max-height img-max-width" if gig.photo.attached? %>
+        <%= cl_image_tag gig.photo.key, class:"img-fluid img-max-height img-max-width" if gig.photo.attached?%>
       </div>
 
       <div id="details_col_div">
