@@ -1,3 +1,62 @@
+<br>
+<div id="gig_parent">
+  <div id="cover_bg">
+
+  <br>
+
+  <div id="gig_parent">
+
+    <h4> <strong> <%= @gig.name %> </strong></h4>
+      <div class="cover_div">
+        <%= cl_image_tag @gig.photo.key, class:"img-fluid img-max-height_1 img-max-width_1" %>
+
+    </div> <br>
+
+    <div id="booking_parent">
+
+      <div id="gig_details">
+        <h2> <%= @gig.description %> </h2>
+        <p> Category: <%= @gig.category %></p> <hr>
+
+        <div id="seller_details">
+          <%= image_tag @gig.user.profile_picture, class: "avatar" %>
+          <div id=s_detials>
+            <h6><strong> Offered by <%= @gig.user.first_name %></strong></h6>
+            <p> Top Gigger  </p>
+        </div>
+
+        </div>
+
+      </div>
+
+      <div id="booking_form">
+        <%= render partial: 'bookings/booking_form', locals: { gig: @gig, booking: Booking.new } %>
+            <hr>
+        <div id="gid_price_div">
+            <p> Total </p>
+            <p><strong> R500 </strong></p>
+        </div>
+
+      </div>
+
+      </div>
+        </div>
+
+
+      </div>
+
+    </div>
+    </div>
+  </div>
+  <br>
+  </div>
+</div>
+
+
+
+
+<%#
+
 <div id="width-div">
   <br>
   <br>
@@ -6,16 +65,12 @@
 
     <div class="big-card">
       <div>
-        <h2><strong><%= @gig.name %></strong></h2>
-        <p><%= @gig.category %></p>
-        <p><%= @gig.description%> </p>
-        <p><strong><%= @gig.user.first_name %></strong></p>
-
-        <%= link_to "Back to home page", root_path ,class: 'btn btn-info'%>
-        <%= link_to "Book this groover", new_gig_booking_path(@gig), class: 'btn btn-primary'%>
+        <h2><strong><%= @gig.name %>
+        <%# <p><%= @gig.category %>
+        <%# <p><%= @gig.description </p>
       </div>
-    </div>
+        <%= link_to "Back to home page", root_path %>
+        <%# <%= link_to "Book this gig", new_gig_booking_path(@gig) %>
+    <%# </div>
   </div>
-</div>
-
-</div>
+</div> %>

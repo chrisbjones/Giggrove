@@ -8,8 +8,12 @@ class GigsController < ApplicationController
   end
 
   def show
+
     @gig = Gig.find(params[:id])
     @user = current_user
+    @booking = Booking.new
+    @booking.gig = @gig
+
   end
 
   def new
