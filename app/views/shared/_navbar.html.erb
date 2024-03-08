@@ -23,8 +23,13 @@
           </li>
           <li class="nav-item dropdown">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= image_tag @user.profile_picture, class: "avatar"%>
-          <%# <%= image_tag current_user.profile_picture, class: "avatar", alt: "dropdown menu" %>
+
+          <% if current_user.profile_picture.present? %>
+            <%= image_tag current_user.profile_picture, class: "avatar" %>
+          <% else %>
+            <%= image_tag "default_avatar.jpg", class: "avatar" %> <!-- Replace "default_avatar.jpg" with the path to your default image -->
+          <% end %>
+            <%# <%= image_tag current_user.profile_picture, class: "avatar", alt: "dropdown menu" %>
             <%# <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu" %>
           </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
