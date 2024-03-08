@@ -5,15 +5,28 @@ class GigsController < ApplicationController
     @gigs = Gig.all
     @user = current_user
     @gig = @user.gigs
+    @all_gigs = Gig.all
+    if params[:query].present?
+      @gigs = Gig.global_search(params[:query])
+    else
+      @gigs = Gig.all
+    end
   end
 
   def show
 
     @gig = Gig.find(params[:id])
     @user = current_user
+
     @booking = Booking.new
     @booking.gig = @gig
 
+    if @gig.geocoded?
+      @marker = {
+        lat: @gig.latitude,
+        lng: @gig.longitude
+      }
+    end
   end
 
   def new
