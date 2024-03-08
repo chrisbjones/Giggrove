@@ -33,14 +33,11 @@
           <li class="nav-item dropdown">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-            <% if @user.profile_picture.present? %>
-              <%= image_tag @user.profile_picture, class: "avatar" %>
-            <% else %>
-              <%=image_tag "default_avatar.jpg", class: "avatar"%> <% "https://images.unsplash.com/photo-1707343843437-caacff5cfa74?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8" %>
-            <% end %>
-
-          <%# <%= image_tag current_user.profile_picture, class: "avatar", alt: "dropdown menu" %>
-            <%# <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu" %>
+          <% if current_user.profile_picture.present? %>
+            <%= image_tag current_user.profile_picture, class: "avatar" %>
+          <% else %>
+            <%= image_tag "default_avatar.jpg", class: "avatar" %> <!-- Replace "default_avatar.jpg" with the path to your default image -->
+          <% end %>
           </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Action", "#", class: "dropdown-item" %>
