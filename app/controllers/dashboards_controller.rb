@@ -7,7 +7,10 @@ class DashboardsController < ApplicationController
     # @requests = requests.sort_by(&:created_at)
 
     @user = current_user
-    @bookings = current_user.bookings
+    # @bookings = current_user.bookings
+    @bookings = Booking.upcoming-upcoming_for_user(@user)
     @requests = @bookings.reject { |booking| booking.requester == current_user.id }
+  rescue Act
   end
 end
+

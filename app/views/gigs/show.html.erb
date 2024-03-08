@@ -8,7 +8,8 @@
 
     <h4> <strong> <%= @gig.name %> </strong></h4>
       <div class="cover_div">
-        <%= cl_image_tag @gig.photo.key, class:"img-fluid img-max-height_1 img-max-width_1" %>
+      <%# commented out this image because some gigs don't have photos, therefore @gig.photo returns nil and we get a nil class error. All gigs need to have photos for the demo or we need a default photo here. i.e if @gig.photo then this line, else default photo.  %>
+        <%# <%= cl_image_tag @gig.photo.key, class:"img-fluid img-max-height_1 img-max-width_1" %>
 
     </div> <br>
 
