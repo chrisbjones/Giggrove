@@ -5,6 +5,11 @@
         <%= form.text_field :name, class: "form-control string optional", id: "name" %>
       </div>
 
+      <div class="mb-3 string optional gig_location">
+        <%= form.label :location, class: "string optional" %>
+        <%= form.text_field :location, class: "form-control string optional", id: "location" %>
+      </div>
+
       <div>
         <%= form.label :category, class: "string optional" %>
         <%= form.select :category, options_for_select(["Cooking", "Washing", "Cleaning", "Repair"]), { include_blank: "Category" }, class: "form-select", id: "form_first" %>

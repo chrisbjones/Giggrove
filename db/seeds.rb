@@ -23,6 +23,7 @@ users << User.create!(first_name: "Chris", last_name: "J.", email: "chris@giggro
 
 puts "#{User.count} users created"
 
+
 # puts "Creating gigs"
 #   15.times do
 #   gig = Gig.new(
