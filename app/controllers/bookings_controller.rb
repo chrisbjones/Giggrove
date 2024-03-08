@@ -38,18 +38,28 @@ class BookingsController < ApplicationController
   end
 
   def destroy
-    @gig = Gig.find(params[:gig_id])
-    @booking = @gig.booking.find(params[:id])
+    @booking = Booking.find(params[:id])
 
     if @booking.destroy
-      redirect_to root_path, notice: "Booking has been cancelled"
+      redirect_to dashboard_path, notice: "Booking has been cancelled"
     end
   end
 
+  # def approve
+  #   booking = Booking.find(params[:id])
+  #   booking.update(status: 'approved')
+  #   redirect_to dashboard_path
+  # end
+
   def approve
-    booking = Booking.find(params[:id])
-    booking.update(status: 'approved')
-    redirect_to dashboard_path
+    booking = Booking.find_by(id: params[:id])
+    if booking
+      booking.update(status: 'approved')
+      redirect_to dashboard_path, notice: 'Booking approved'
+    else
+      # Handle the case where the booking is not found (e.g., redirect with an error message)
+      redirect_to dashboard_path, alert: 'Booking not found'
+    end
   end
 
   def decline
