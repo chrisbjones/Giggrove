@@ -15,43 +15,41 @@
         <% end %>
       </div>
       <div id="container_gig_left">
+
           <h2>Your requested bookings:</h2>
-            <% @requests.each do |booking| %>
+          <% @requests.each do |booking| %>
+          <% gig = booking.gig %> # Access the associated gig for each booking
               <p><strong>Gig Booked: </strong><%= booking.gig.name %></p>
               <p><strong> Date: </strong><%= booking.date %></p>
               <p><strong>Time:</strong><%= booking.time %></p>
               <p><strong>Status: </strong><%= booking.status.capitalize %></p>
-              <%= link_to "Cancel Booking", gig_booking_path(gig.id, booking.id), method: :delete, class: "btn btn-danger rounded", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to cancel this booking?" } %>
-
+              <%= link_to "Cancel Booking", cancel_booking_path(gig.id, booking.id), method: :delete, class: "btn btn-danger rounded", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to cancel this booking?" } %>
               <hr>
             <% end %>
 
           <h2>Gigs you offer:</h2>
-          <% @user.gigs.each do |gig| %>
-            <div class="gig">
-              <p><strong>Name:</strong> <%= gig.name %></p>
-              <p><strong>Description:</strong> <%= gig.description %></p>
-              <% gig.bookings.each do |booking| %>
-                <% if booking.status == 'pending' %>
-                  <div class="requested-booking">
-                    <p><strong>Requested by:</strong><%= booking.user.first_name %></p>
-                    <%= link_to "Approve", booking_approval_path(gig), class: 'btn btn-info' %>
-                    <%= link_to "Decline", booking_declined_path(booking), class: 'btn btn-light' %>
-                  </div>
-                <% end %>
+            <% if @user_gigs.present? %>
+              <% @user.gigs.each do |gig| %>
+                <div class="gig">
+                  <p><strong>Name:</strong> <%= gig.name %></p>
+                  <p><strong>Description:</strong> <%= gig.description %></p>
+                  <% gig.bookings.pending.each do |booking| %>
+                  <%# gig.bookings.each do |booking| %>
+                    <% if booking.status == 'pending' %>
+                      <div class="requested-booking">
+                        <p><strong>Requested by:</strong><%= booking.user.first_name %></p>
+                        <%= link_to "Approve", booking_approval_path(gig), class: 'btn btn-info' %>
+                        <%= link_to "Decline", booking_declined_path(booking), class: 'btn btn-light' %>
+                      </div>
+                    <% end %>
+                  <% end %>
+                </div>
+                <hr>
               <% end %>
-
-
-
-              <%# <%= simple_form_for gig do |f| %>
-              <%# <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
-              <%# <%= f.submit 'Reject', class: 'btn btn-light' %>
-            <%# <% end %>
-            </div>
-            <hr>
-          <% end %>
+              <% else %>
+                <p>you don't have any upcoming gigs</p>
+                <% end %>
         </div>
       </div>
     </div>
   </div>
-</div>

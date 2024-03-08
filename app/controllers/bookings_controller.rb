@@ -4,8 +4,8 @@ class BookingsController < ApplicationController
   end
 
   def new
-    @booking = Booking.new
     @gig = Gig.find(params[:gig_id])
+    @booking = Booking.new
     @booking.gig = @gig
   end
 
@@ -38,11 +38,12 @@ class BookingsController < ApplicationController
   end
 
   def destroy
-    @gig = Gig..find(params[:gig_id])
+    @gig = Gig.find(params[:gig_id])
     @booking = @gig.booking.find(params[:id])
-        if @booking.destroy
-        redirect_to root_path, notice: "Booking has been cancelled"
-        end
+
+    if @booking.destroy
+      redirect_to root_path, notice: "Booking has been cancelled"
+    end
   end
 
   def approve
