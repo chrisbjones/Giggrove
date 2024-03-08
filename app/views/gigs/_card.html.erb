@@ -1,30 +1,37 @@
 <div class="container my-5 align-items-center">
+  <div id="div_design">
+    <div class="cards">
 
-<div id="div_design">
-  <div class="cards">
-    <% @gigs.each do |gig| %>
-      <div class="parent-div">
-      <br>
-        <div id="user_profile_div">
-          <div id="title_div">
-  
-            <%= image_tag gig.user.profile_picture, class: "avatar" %>
-            <h5> <%= gig.user.first_name %> <%= gig.user.last_name %> </h5>
+      <% @gigs.each do |gig| %>
+        <div class="parent-div">
+          <br>
+
+          <div id="user_profile_div">
+
+            <div id="title_div">
+
+              <%= image_tag gig.user.profile_picture, class: "avatar img-max-height_8 img-max-width_8" %>
+              <h5> <%= gig.user.first_name %> <%= gig.user.last_name %> </h5>
+
+            </div><hr>
+
           </div>
-          <hr>
-          </div>
-      <div id="image_div">
-        <%= cl_image_tag gig.photo.key, class:"img-fluid img-max-height img-max-width" if gig.photo.attached?%>
-      </div>
 
-      <div id="details_col_div">
-          <h3><%= link_to gig.name, gig_path(gig) %></h3>
-            <p> Category: <%= gig.category %></p>
-            <%# <button type="button" class="btn btn-primary" data-mdb-ripple-init>Hire Now</button> %>
-      </div>
+            <div id="image_div">
+              <%= cl_image_tag gig.photo.key, class:"img-fluid" if gig.photo.attached? %>
+            </div>
 
-      </div>
-    <% end %>
+            <div id="details_col_div">
+                <h3><%= link_to gig.name, gig_path(gig) %></h3>
+                <p> Category: <%= gig.category %></p>
+            </div>
+
+        </div>
+      <% end %>
+
+    </div>
   </div>
 </div>
-</div>
+
+
+<%# <button type="button" class="btn btn-primary" data-mdb-ripple-init>Hire Now</button> %>

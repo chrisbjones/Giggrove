@@ -14,45 +14,42 @@
 
     <div id="booking_parent">
 
-    <div id="gig_details">
-      <h2> <%= @gig.description %> </h2>
-      <p> Category: <%= @gig.category %></p> <hr>
+      <div id="gig_details">
+        <h2> <%= @gig.description %> </h2>
+        <p> Category: <%= @gig.category %></p> <hr>
 
-      <div id="seller_details">
-         <%= image_tag @gig.user.profile_picture, class: "avatar" %>
-        <div id=s_detials>
-          <h6><strong> Offered by <%= @gig.user.first_name %></strong></h6>
-          <p> Top Gigger  </p>
-       </div>
-
-      </div>
-
-    </div>
-
-    <div id="below_div">
-
-    <div id="booking_form">
-      <div id="booking_input_div">
-        <div class="container my-5">
-         <%= simple_form_for [@gig] do |f| %>
-          <%= f.input :name %>
-          <%= f.submit "Book gig"%>
-        <% end %>
+        <div id="seller_details">
+          <%= image_tag @gig.user.profile_picture, class: "avatar" %>
+          <div id=s_detials>
+            <h6><strong> Offered by <%= @gig.user.first_name %></strong></h6>
+            <p> Top Gigger  </p>
         </div>
-      </div>
-      <hr>
 
-      <div id="gid_price_div">
-          <p> Total </p>
-          <p><strong> R500 </strong></p>
+        </div>
+
       </div>
-    </div>
+
+      <div id="booking_form">
+        <%= render partial: 'bookings/booking_form', locals: { gig: @gig, booking: Booking.new } %>
+            <hr>
+        <div id="gid_price_div">
+            <p> Total </p>
+            <p><strong> R500 </strong></p>
+        </div>
+
+      </div>
+
+      </div>
+        </div>
+
+
+      </div>
 
    </div>
    </div>
   </div>
-    <br>
-</div>
+  <br>
+  </div>
 </div>
 
 
