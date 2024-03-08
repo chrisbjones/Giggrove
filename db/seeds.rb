@@ -33,5 +33,5 @@ puts "Creating gigs"
     user_id: users.sample.id
   )
   gig.save!
- end
- puts "#{Gig.count} gigs created"
+end
+puts "#{Gig.count} gigs created"
