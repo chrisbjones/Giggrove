@@ -1,9 +1,9 @@
 <div class="container my-5">
   <%= simple_form_for [@gig, @booking] do |f| %>
-    <%= f.input :date %>
+    <%= f.input :date, class: "form-control" %>
     <%= f.input :time %>
     <!-- Set the requester_id with current_user id -->
     <%= f.hidden_field :requester_id, value: current_user.id %>
-    <%= f.submit "Book gig" %>
+    <%= f.submit "Book gig", class: "form-control btn btn-dark" %>
   <% end %>
 </div>

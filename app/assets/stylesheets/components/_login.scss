@@ -1,0 +1,27 @@
+.container_login{
+  width: 1000px;
+  height: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+ 
+
+  #login_details{
+    background-color: antiquewhite;
+    width: 40%;
+    padding: 50px;
+  }
+
+  #login_image0{
+    width: 60%;
+    object-fit: cover;
+    background-image:  url("https://img.freepik.com/free-photo/afro-woman-holding-bucket-with-cleaning-items_58466-11246.jpg?t=st=1709899914~exp=1709903514~hmac=eca9df6e66c89998e7112c8e43f7b455d3d6f976046443df255d5f759202c007&w=740");
+  }
+
+  #shared{
+  display: flex;
+  justify-content: space-between;
+  }
+
+}

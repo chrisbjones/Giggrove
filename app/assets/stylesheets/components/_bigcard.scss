@@ -1,0 +1,43 @@
+.container-page{
+  height: 600px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+
+.parent_new{
+  height: 350px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #1F7B6B;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+
+  #new_gig_div{
+    padding: 30px ;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+
+    // display:flex;
+    // justify-content: space-between;
+    // justify-content: flex-end;
+
+    #new-gig-left{
+      width: 40%;
+      margin-top: 60px;
+      margin-left: 20px;
+      color: white;
+
+      p{
+        font-size:medium;
+      }
+
+    }
+    #new-gig-right{
+      justify-content: flex-end;
+    }
+
+  }
+}
