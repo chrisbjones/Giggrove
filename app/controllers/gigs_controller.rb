@@ -25,7 +25,7 @@ class GigsController < ApplicationController
       redirect_to gig_path(@gig), notice: 'Gig was successfully created.'
     else
       render :new
-    end
+    end 
   end
 
   def approve
