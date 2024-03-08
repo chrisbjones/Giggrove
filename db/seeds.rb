@@ -23,15 +23,16 @@ users << User.create!(first_name: "Chris", last_name: "J.", email: "chris@giggro
 
 puts "#{User.count} users created"
 
-puts "Creating gigs"
-  15.times do
-  gig = Gig.new(
-    name: Faker::Company.name,
-    location: "#{Faker::Address.street_address}, #{Faker::Address.city}",
-    category: "#{Faker::Job.title.downcase}",
-    description: Faker::Lorem.paragraph.truncate(50),
-    user_id: users.sample.id
-  )
-  gig.save!
-end
-puts "#{Gig.count} gigs created"
+
+# puts "Creating gigs"
+#   15.times do
+#   gig = Gig.new(
+#     name: Faker::Company.name,
+#     location: "#{Faker::Address.street_address}, #{Faker::Address.city}",
+#     category: "#{Faker::Job.title.downcase}",
+#     description: Faker::Lorem.paragraph.truncate(50),
+#     user_id: users.sample.id
+#   )
+#   gig.save!
+#  end
+#  puts "#{Gig.count} gigs created"
