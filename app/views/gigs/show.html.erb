@@ -9,9 +9,11 @@
         <h2><strong><%= @gig.name %></strong></h2>
         <p><%= @gig.category %></p>
         <p><%= @gig.description%> </p>
+        <p><strong><%= @gig.user.first_name %></strong></p>
+
+        <%= link_to "Back to home page", root_path ,class: 'btn btn-info'%>
+        <%= link_to "Book this groover", new_gig_booking_path(@gig), class: 'btn btn-primary'%>
       </div>
-        <%= link_to "Back to home page", root_path %>
-        <%= link_to "Book this gig", new_gig_booking_path(@gig) %>
     </div>
   </div>
 </div>

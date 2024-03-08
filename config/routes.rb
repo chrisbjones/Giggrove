@@ -10,12 +10,13 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   resources :gigs, only: [:show, :create, :new] do
-    resources :bookings, only: [:new, :create, :index, :destroy]
+    resources :bookings, only: [:new, :create, :index]
     end
     resources :bookings, only: [:update]
     get "/dashboard", to: "dashboards#show"
 
   get "approve/:id", to: 'bookings#approve', as: 'booking_approval'
   get "decline/:id", to: 'bookings#decline', as: 'booking_declined'
+  delete '/gigs/:gig_id/bookings/:id', to: 'bookings#destroy', as: 'gig_booking'
 
 end

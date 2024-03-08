@@ -3,8 +3,7 @@
   <%= simple_form_for [@gig, @booking] do |f| %>
     <%= f.input :date %>
     <%= f.input :time %>
-    # hidden field with current_user id ?? add the column to the booking first
-    <%= f.hidden :requesteer_id, current_user %>
+    <%= f.hidden_field :requester, value: current_user.id %>
     <%= f.submit "Book gig"%>
   <% end %>
 </div>

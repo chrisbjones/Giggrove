@@ -33,9 +33,19 @@ class GigsController < ApplicationController
 
   end
 
+  def destroy
+    gig.destroy
+    redirect_to dashboard_path, notice: "Gig was successfully deleted"
+
+  end
+
   private
 
   def gig_params
     params.require(:gig).permit(:name, :category, :description, :photo)
+  end
+
+  def set_gig
+    @gig = Gig.find(params[:id])
   end
 end
